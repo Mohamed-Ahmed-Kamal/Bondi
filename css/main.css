@@ -1,0 +1,191 @@
+body {
+  font-family: "Roboto", sans-serif;
+  height: 300vh;
+}
+li {
+  list-style-type: none;
+}
+:root {
+  --dark--: #19283f;
+  --green--: #2bd1cc;
+  --mainTransetion--: 0.3s;
+  --backgraund--: #eff7fa;
+  --yellow-color: #ffc400;
+}
+.navbar {
+  background-color: var(--dark--);
+}
+.fa-magnifying-glass {
+  border-left: 2px solid white;
+  padding-left: 5px;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+  padding: 10px;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: var(--green--);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.main-btn {
+  margin-left: 15px;
+}
+.main-title::after {
+  position: absolute;
+  content: " ";
+  bottom: -15px;
+  background-color: var(--green--);
+  width: 120px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ----------------Landing---------------------- */
+.landing {
+  background-color: var(--dark--);
+  min-height: 100vh;
+}
+/* ------------------features----------------------------- */
+
+.features .icon-holder {
+  height: 200px;
+}
+.number {
+  height: 100%;
+  color: var(--green--);
+  opacity: 0.1;
+}
+.icon {
+  bottom: 0;
+  font-size: 60px;
+  color: var(--green--);
+}
+/* --------------------Gallary--------------------------------------- */
+.gallary {
+  background-color: var(--backgraund--);
+}
+
+.gallary .row .box {
+  background-color: white;
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.gallary .row .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51 209 204 / 76%);
+  z-index: 1;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  transform: translateX(calc(-100% - 5px));
+  transition: var(--mainTransetion--);
+}
+.gallary .row .box:hover::before {
+  transform: translateX(0);
+}
+.active-li-gallary {
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+.gallary ul li {
+  cursor: pointer;
+}
+.gallary ul li:not(.active-li-gallary):hover {
+  color: var(--green--);
+  transition: var(--mainTransetion--);
+}
+/* -----------------------About------------------------------- */
+.discription {
+  max-width: 500px;
+  margin: 20px auto;
+}
+/* -----------------------Team------------------------------- */
+.team {
+  background-color: var(--backgraund--);
+}
+.title-h {
+  color: var(--yellow-color);
+}
+.member h3 {
+  margin: 20px auto;
+  background-color: var(--yellow-color);
+  max-width: 200px;
+}
+
+.member p {
+  max-width: 180px;
+  margin: 20px auto;
+}
+.member img {
+  width: 200px;
+  height: 200px;
+}
+/* ----------------------Techs--------------------------------------- */
+
+.techs img {
+  width: 108px;
+  margin-right: 35px;
+  margin-bottom: 35px;
+}
+/* -----------------------Project-------------------------------------- */
+.project {
+  background-color: var(--dark--);
+  color: white;
+}
+/* ----------------------blog------------------------------------------- */
+.blog .box {
+  border: 1px solid #00000026;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.blog .box .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+}
+.blog .box .text p {
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+/* ----------------subscrib------------------------------------------- */
+.subscrib {
+  background-color: var(--yellow-color);
+  padding: 20px;
+}
+.subscrib input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+}
+.subscrib input::placeholder {
+  color: white;
+}
+/* ------------------------ footer---------------------------------------- */
+footer {
+  background-color: var(--dark--);
+  color: white;
+}
+footer .row div:first-child p:last-child span {
+  color: var(--yellow-color);
+}
+footer .row div:first-child p:not(:last-child) span {
+  color: var(--green--);
+}
+footer ul li {
+  color: #ffffffba;
+  margin: 0 15px 0 0;
+}
